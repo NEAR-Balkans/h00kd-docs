@@ -9,6 +9,7 @@ module.exports = {
       label: 'Guides',
       items: [
         'guides/h00kd',
+        'guides/h00kd_metadata',
       ],
     },
     {
@@ -16,6 +17,7 @@ module.exports = {
       label: 'Contracts',
       items: [
         'contracts/h00kd',
+        'contracts/h00kd_metadata',
       ],
     },
     {

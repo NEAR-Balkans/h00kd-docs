@@ -74,7 +74,7 @@ Returns a list of Token Metadata for each token id provided as argument.
 pub fn get_tokens_metadata(&self, tokens_id: Vec<TokenId>) -> Vec<TokenMetadata>
 ```
 
-#### Parameters:
+## Parameters
 
 | Name              | Type              | Description                                     |
 | ----------------- | ----------------- | ----------------------------------------------- |
