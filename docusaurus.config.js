@@ -1,27 +1,27 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Lido On Polygon Docs',
-  tagline: 'Documentation Lido on Polygon staking protocol',
-  url: 'https://polygon.lido.github.io',
+  title: 'H00KD',
+  tagline: 'Documentation H00KD proof of asistance protocol',
+  url: 'https://h00kd.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon-32x32.png',
-  organizationName: 'lidofinance', // Usually your GitHub org/user name.
-  projectName: 'polygon-docs', // Usually your repo name.
+  organizationName: 'ShardLabs', // Usually your GitHub org/user name.
+  projectName: 'h00kd-docs', // Usually your repo name.
   themeConfig: {
     prism: {
-      additionalLanguages: ['solidity'],
+      additionalLanguages: ['rust'],
     },
     navbar: {
-      title: 'Lido On Polygon Docs',
+      title: 'H00KD Docs',
       logo: {
-        alt: 'Lido On Polygon Logo',
+        alt: 'H00KD Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          href: 'https://github.com/lidofinance',
+          href: 'https://github.com/Shard-Labs/h00kd-contracts',
           label: 'GitHub',
           position: 'right',
         },
