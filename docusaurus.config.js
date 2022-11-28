@@ -36,7 +36,7 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/lidofinance/polygon-docs/blob/main/',
+          editUrl: 'https://github.com/ShardLabs/h00kd-docs/blob/main/',
         },
       },
     ],
