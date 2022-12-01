@@ -6,7 +6,7 @@
 
 The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
 
-![alt text](../static/img/mint_clone_flow.png)
+![alt text](../static/img/h00kd_arch.png)
 
 ## H00KD
 
