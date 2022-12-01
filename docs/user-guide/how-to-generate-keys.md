@@ -1,3 +1,49 @@
 # How to generate keys
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+After you have created an event (follow this guide on how to create an event) and you want to distribute it to h00k to your collectors. In this guide we will go through all steps needed to generate the keys used to claim your event’s h00k. follow along:
+
+### Step 1
+
+Connect your NEAR Wallet to h00kd platform using the connect button at the top right corner.
+
+### Step 2
+
+Navigate to [manage events](https://app.h00kd.com/admin/manage), This page contains the list of events created using the currently connected NEAR Wallet.
+
+### Step 3
+
+On the row of the event you want to generate new claim keys for, click on key icon on ‘Actions’ column.
+![screenshot of manage screen with a pointer to key icon for keys generation](../../static/img/user-guide/keys-modal-indicator.png)
+
+### Step 4
+
+After opening the modal, you choose between generating two types of keys:
+
+- **Regular keys:** are keys that have a single use, meaning that each collector should get a unique key valid for only one claim operation.
+- **Static keys:** are keys that have a set amount of uses, meaning that a group of collectors can use the same key to do multiple claim operations.
+
+:::tip
+
+Use “Generate a static key” option if you want to generate a static link claimable multiple times. This option is cheaper and easier to distribute
+
+:::
+
+![Key generating modal screenshot](../../static/img/user-guide/key-generating-modal.png)
+
+Key generating is a three steps process:
+
+- **First**, pick the number of unique keys you want to generate. (in case of static keys, you pick number of uses for one single key) and click on `Generate`.
+- **Second**, you download the claim links generated either in a text format (txt file) or a QRCode in an zip containing images (png file).
+- **Lastly**, you submit the generated keys using the `Send` at the bottom of the form, then you will be redirected to NEAR wallet to sign the transaction.
+
+:::caution
+
+Make sure to have saved the keys in a safe location before submitting them, as there's no other way to retrieve them.
+
+:::
+
+Keys are exported as a link with the following format [**APP_URL**]/claim?type=[**operationType**]&key=[**privateKey**]
+
+- **APP_URL**: h00kd platform URL.
+- **operation**: a parameter specifying the type of operation (simple claim or NEAR Wallet creation and claim).
+- **key**: private key used to claim.
