@@ -2,7 +2,7 @@
 
 - [Source Code](https://github.com/Shard-Labs/h00kd-contracts/blob/develop-2.0/h00kd/src/lib.rs)
 
-Contract that implements NEP-141 standard and clone functionalities for storage saveing purpose. H00kd contract contains all the minted and cloned NFTs.
+Contract that implements [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) standard and clone functionalities for storage saveing purpose. H00kd contract contains all the minted and cloned NFTs.
 
 ## Initialization Method
 
@@ -79,7 +79,7 @@ pub fn get_tokens_metadata(&self, tokens_id: Vec<TokenId>) -> Vec<TokenMetadata>
 | Name              | Type              | Description                                     |
 | ----------------- | ----------------- | ----------------------------------------------- |
 | metadata_contract | AccountId         | Contract account id that interacts with H00kd   |
-| token_metadata    | TokenMetadata     | Metadata structure for NEP-141 contracts        |
+| token_metadata    | TokenMetadata     | Metadata structure for NEP-171 contracts        |
 | clone_from_id     | TokenId           | Token identifier used to clone into a new token |
 | token_owner_id    | AccountId         | New NFT minted/cloned owner account             |
 | genesis_token     | TokenId           | Token identifier used to clone into a new token |

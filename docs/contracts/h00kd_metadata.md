@@ -194,7 +194,7 @@ pub fn get_mint_storage_cost_amount(&self) -> U128
 | Name              | Type                | Description                                                                |
 | ----------------- | ------------------- | -------------------------------------------------------------------------- |
 | event_uri         | String              | Hash event data on IPFS identifier                                         |
-| token_metadata    | TokenMetadata       | Contract metadata description according to NEP-141                         |
+| token_metadata    | TokenMetadata       | Contract metadata description according to NEP-171                         |
 | event_starts      | u64                 | Event's starting date in nanoseconds from epoch                            |
 | event_ends        | u64                 | Event's ending date in nanoseconds from epoch                              |
 | event_id          | u64                 | Event unique identifier                                                    |

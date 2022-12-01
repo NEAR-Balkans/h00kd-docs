@@ -4,7 +4,7 @@
 
 ## H00KD
 
-The H00KD contract implements the NEP-141 standard in order to manage and store NFTs. On top of all NEP-141 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
+The H00KD contract implements the [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
 
 ## Clone
 
