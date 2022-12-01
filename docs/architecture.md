@@ -18,6 +18,20 @@ The [H00KD](./contracts/h00kd.md) contract implements the [NEP-171](https://gith
 
 The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
 
+#### Impact of clonable NFTs on storage and gas costs
+
+The mint mechanism presents some inefficiencies when it comes to our use case. We know that on a Cross Contract Call scenario, increasing the arguments within any method will increase as well the gas costs of a recipe.
+
+A way to minimize the gas costs on H00KD is to reduce the size of recipes on claiming new NFTs. To achieve that, we created a so called "genesis token" on creating a new event. Thus, we can use the genesis token to replicate or clone it multiple times without spending additional gas.
+
+In addition to the previous improvment, cloned NFTs only store the id and owner information. All additional infomation about the NFT is hosted on the genesis token and it can be fetched on demand.
+
+#### Storage comparison
+
+![alt text](../static/img/mint_vs_clone.png)
+
+After experimenting with both mechanisms, we found that, for a reasonabe NFT data size, cloning NFTs is being more efficient in comparison to minting new NFTs, where the cost storage increases drastically.
+
 ## H00KD Metadata
 
 The [H00KD Metadata](./contracts/h00kd_metadata.md) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
