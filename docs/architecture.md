@@ -20,7 +20,7 @@ The contract implements a new functionality to optimize minting new NFTs using a
 
 ## H00KD Metadata
 
-The H00KD Metadata contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
+The [H00KD Metadata](./contracts/h00kd_metadata.md) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
 
 ### Event State Transition
 
