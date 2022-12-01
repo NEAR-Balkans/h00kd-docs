@@ -26,5 +26,6 @@ module.exports = {
       items: ['security/bugbounty'],
     },
     'deployed-contracts',
+    'subgraph'
   ],
 }

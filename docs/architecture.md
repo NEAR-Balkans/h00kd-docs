@@ -4,33 +4,37 @@
 
 ## H00KD
 
+The H00KD contract implements the NEP-141 standard in order to manage and store NFTs. On top of all NEP-141 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
+
 ## Clone
 
-The contract implements a new functionality that allows new NFT to be created out of a "root" or "genesis" token. The advantage of using clonable NFTs is to save storage on our H00KD contract. The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
+The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
 
 ### Here's how it works
+
+The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
 
 ![alt text](../static/img/mint_clone_flow.png)
 
 ## H00KD Metadata
 
-TODO: Some generic decription...
+The H00KD Metadata contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
 
-## Event State Transition
+### Event State Transition
 
 ![alt text](../static/img/event_state_transition.png)
 
 All events have three possible states. Each state indicates also what kind of actions can be done for a particular event.
 
-### Opened
+#### Opened
 
 Opened event is the initial state of all events. On this state, the owner can add new public keys linked to the event and users can claim or create NEAR accounts.
 
-### Closed
+#### Closed
 
 A closed event indicated that the event has ended. An event can move to this state only of the block time is higher than the event end date. After the transition, all remaining allocated funds are sent back to the event owner.
 
-### Cancelled
+#### Cancelled
 
 A cancelled evend indicated that the event has been cancelled. An event canm move to this state only if the block time is lower thant the event start date. After the transition, all the allocated funds are sent back to the event owner.
 
@@ -38,7 +42,30 @@ A cancelled evend indicated that the event has been cancelled. An event canm mov
 
 ## Crate new event and adding public keys
 
-Previously to interacting with the contract, the event data needs to be stored on IPFS. The CID is needed to be stored within the contrac for traceability reasons.
+Previously to interacting with the contract, the event data needs to be stored on IPFS. The CID is needed to be stored within the contrac for traceability reasons. The CID is currently being used to querry the event data using GraphQL, so make sure you are using the [CID V1](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1) format.
+
+Here's an example of how one can store event data on IPFS using JS.
+
+```js
+import * as IPFS from 'ipfs-core'
+
+let IPFS_event_data = {
+  title: 'Event Title',
+  description: 'description',
+  tags: 'tags',
+  country: 'country',
+  city: 'city',
+  date_from: 1000000000,
+  date_to: 10000000000000000,
+  image: 'some image',
+  links: 'links to event',
+}
+
+const fileAdded = await node.add({
+  path: `${nearNetworkId}_event_${element.event_id}.json`,
+  content: JSON.stringify(IPFS_event_data),
+})
+```
 
 The create event method accepts four arguments: cid, token_metadata, start date and end date.
 
