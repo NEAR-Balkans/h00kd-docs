@@ -2,6 +2,12 @@
 
 <!-- Necessary comment to make work below header tag -->
 
+## Overview
+
+The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
+
+![alt text](../static/img/mint_clone_flow.png)
+
 ## H00KD
 
 The H00KD contract implements the [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
@@ -9,12 +15,6 @@ The H00KD contract implements the [NEP-171](https://github.com/near/NEPs/blob/ma
 ## Clone
 
 The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
-
-### Here's how it works
-
-The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
-
-![alt text](../static/img/mint_clone_flow.png)
 
 ## H00KD Metadata
 
