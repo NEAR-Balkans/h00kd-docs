@@ -56,6 +56,13 @@ A cancelled evend indicated that the event has been cancelled. An event canm mov
 
 **Note: after closing or cancelling an event, all interactions with that event are disabled**
 
+## Linkdrop
+
+- [Source code](https://github.com/near/near-linkdrop)
+- [Method](https://github.com/near/near-linkdrop/blob/master/src/lib.rs#L127)
+
+H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdrop contract allows any user or contract to create a new NEAR account by making use of the `create_account` method.
+
 ## Crate new event and adding public keys
 
 Previously to interacting with the contract, the event data needs to be stored on IPFS. The CID is needed to be stored within the contrac for traceability reasons. The CID is currently being used to querry the event data using GraphQL, so make sure you are using the [CID V1](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1) format.
