@@ -4,6 +4,15 @@ module.exports = {
     'how-it-works',
     {
       type: 'category',
+      label: 'User guide',
+      items: [
+        'user-guide/basics',
+        'user-guide/how-to-create-event',
+        'user-guide/how-to-generate-keys',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Guides',
       items: [
         'guides/h00kd',
