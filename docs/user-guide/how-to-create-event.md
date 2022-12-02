@@ -4,7 +4,7 @@ Creating an event is the first step required toward having h00ks (collectibles) 
 
 ### Step 1
 
-To begin navigate to [events creation](https://app.h00kd.com/admin/create). This page contains the form used to create events
+To begin, navigate to [events creation](https://app.h00kd.com/admin/create). This page contains the form used to create events
 ![event creation page screenshot](../../static/img/user-guide/events-creation.png)
 
 ### Step 2
@@ -21,7 +21,7 @@ Once connected to hookd platform with your NEAR wallet, next step is to fill the
 | 2   | Description\*       | (preferably short) description of the event |
 | 3   | City                | City in which the event took place          |
 | 4   | Country             | Country in which the event took place       |
-| 5   | Date from           | Date on which the event start               |
+| 5   | Date from           | Date on which the event started             |
 | 6   | Date to             | Date on which the event ended               |
 | 7   | Tags                | Keywords related to the topic of the event  |
 | 8   | Links               | Links to event related resources            |
@@ -33,7 +33,7 @@ Details filled here will be present to collectors on the h00k preview modal
 
 ### Step 4
 
-After filling all the event details, next step is to submit by clicking on the Create button at the bottom of the form.
+After filling in all the event details, the next step is to submit by clicking on the Create button at the bottom of the form.
 
 :::tip
 

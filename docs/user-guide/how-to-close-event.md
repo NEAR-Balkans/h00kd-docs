@@ -4,7 +4,7 @@ You may want to close or cancel an event, closing an event is a simple process.
 
 ## Step 1:
 
-Connect you NEAR wallet to h00kd platform.
+Connect your NEAR wallet to h00kd platform.
 
 ## Step 2:
 
@@ -20,16 +20,16 @@ On the row of the event you intend to close, click on lock icon on ‘Actions’
 
 The modal prompt you to confirm the closing/cancelation of the event.
 
-Closing an event grants you back the unused NEAR.
+Closing an event grant you back the unused NEAR.
 
 :::info
 
-When you close an event, h00ks that have already been claimed won't be removed from their collectors gallery.
+When you close an event, h00ks that have already been claimed won't be removed from their collectors' gallery.
 
 :::
 
 :::caution
 
-After you close an event, you will no longer be able to re-open it and therefore won't never be able to generate new keys for it.
+After you close an event, you will no longer be able to re-open it and therefore won't be able to generate new keys for it.
 
 :::

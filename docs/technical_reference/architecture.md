@@ -4,7 +4,7 @@
 
 ## Overview
 
-H00KD composed of three contracts, one of which is external. The external [Linkdrop](#linkdrop) contract is used to create new NEAR accounts and it is being called on very specific situations. The remaining two contracts constitute the main functionalities of H00KD. [H00KD Metadata](#h00kd-metadata) contract manages all the events, from creating new events, adding new public keys and closing or canceling events. Lastly, [H00KD](#h00kd) contract is a [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) contract with an additional complexity layer that optimizes storage and gas costs.
+H00KD composed of three contracts, one of which is external. The external [Linkdrop](#linkdrop) contract is used to create new NEAR accounts and it is being called on very specific situations. The remaining two contracts constitute the main functionalities of H00KD. [H00KD Metadata](#h00kd-metadata) contract manages all the events, from creating new events, adding new public keys and closing or canceling events. Lastly, [H00KD](#h00kd) contract is a [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171) contract with an additional complexity layer that optimizes storage and gas costs.
 
 ![alt text](../../static/img/h00kd_arch.png)
 
@@ -17,11 +17,11 @@ H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdro
 
 ## H00KD Metadata
 
-The [H00KD Metadata](../contracts/h00kd_metadata.md) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
+The [H00KD Metadata](../contracts/h00kd_metadata) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
 
 ### Create new event and adding public keys
 
-When creating a new event, the event data is being stored on IPFS [(example)](./ipfs.md). Once the event data's CID is obtained, it will be stored on the contract along side with the [genesis token](#genesis-token) metadata and the event start/end date.
+When creating a new event, the event data is being stored on IPFS [(example)](./ipfs). Once the event data's CID is obtained, it will be stored on the contract along side with the [genesis token](#genesis-token) metadata and the event start/end date.
 
 ![alt text](../../static/img/create_event_add_keys.png)
 
@@ -47,7 +47,7 @@ A cancelled evend indicated that the event has been cancelled. An event canm mov
 
 ## H00KD
 
-The [H00KD](../contracts/h00kd.md) contract implements the NEP-171 standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
+The [H00KD](../contracts/h00kd) contract implements the NEP-171 standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
 
 ### Clone
 

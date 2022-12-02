@@ -4,4 +4,7 @@ slug: /
 
 # Overview
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+h00kd adds the metaverse spice into your life experiences by minting your memory into a Proof of Attendance Protocol NFT
+
+With h00kd your networking is flawless!
+By providing & securing a way to verify event attendance, h00kd grants you a unique digital scarcity, on-chain, forever.
