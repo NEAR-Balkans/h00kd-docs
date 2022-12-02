@@ -4,16 +4,10 @@
 
 ## Mainnet
 
-### Core Protocol
-
-- Contract 1: [`0x00000...`](https://etherscan.io/)
-- Contract 2: [`0x00000...`](https://etherscan.io/)
-- Contract 3: [`0x00000...`](https://etherscan.io/)
+- H00KD: [`h00kd.near`](https://explorer.near.org/accounts/h00kd.near)
+- H00KD Metadata: [`h00kd-metadata.near`](https://explorer.near.org/accounts/h00kd-metadata.near)
 
 ## Testnet
 
-### Core Protocol
-
-- Contract 1: [`0x00000...`](https://etherscan.io/)
-- Contract 2: [`0x00000...`](https://etherscan.io/)
-- Contract 3: [`0x00000...`](https://etherscan.io/)
+- H00KD: [`event-h00kd-v2.dexterdev8.testnet`](https://explorer.testnet.near.org/accounts/event-h00kd-v2.dexterdev8.testnet)
+- H00KD Metadata: [`event-metadata-v2.dexterdev8.testnet`](https://explorer.testnet.near.org/accounts/event-metadata-v2.dexterdev8.testnet)

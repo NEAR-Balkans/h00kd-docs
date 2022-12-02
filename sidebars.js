@@ -1,28 +1,38 @@
 module.exports = {
   docs: [
     'overview',
-    'administration',
-    'architecture',
     'how-it-works',
     {
       type: 'category',
       label: 'Guides',
       items: [
-        'guides/contract-1',
+        'guides/h00kd',
+        'guides/h00kd_metadata',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Technical Reference',
+      items: [
+        'technical_reference/architecture',
+        'technical_reference/ipfs',
+        'technical_reference/subgraph'
+      ]
     },
     {
       type: 'category',
       label: 'Contracts',
       items: [
-        'contracts/contract-1',
+        'contracts/h00kd',
+        'contracts/h00kd_metadata',
       ],
     },
+    /*
     {
       type: 'category',
       label: 'Security',
       items: ['security/bugbounty'],
-    },
+    },*/
     'deployed-contracts',
   ],
 }
