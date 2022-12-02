@@ -10,6 +10,7 @@ module.exports = {
         'user-guide/how-to-create-event',
         'user-guide/how-to-generate-keys-claim',
         'user-guide/how-to-generate-keys-create',
+        'user-guide/how-to-close-event',
       ],
     },
     {
