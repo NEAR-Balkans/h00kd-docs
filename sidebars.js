@@ -1,7 +1,6 @@
 module.exports = {
   docs: [
     'overview',
-    'how-it-works',
     {
       type: 'category',
       label: 'User guide',
@@ -11,14 +10,6 @@ module.exports = {
         'user-guide/how-to-generate-keys-claim',
         'user-guide/how-to-generate-keys-create',
         'user-guide/how-to-close-event',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Guides',
-      items: [
-        'guides/h00kd',
-        'guides/h00kd_metadata',
       ],
     },
     {
