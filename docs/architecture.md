@@ -19,7 +19,7 @@ H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdro
 
 The [H00KD Metadata](./contracts/h00kd_metadata.md) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
 
-### Crate new event and adding public keys
+### Create new event and adding public keys
 
 When creating a new event, the event data is being stored on IPFS [(example)](./ipfs.md). Once the event data's CID is obtained, it will be stored on the contract along side with the [genesis token](#genesis-token) metadata and the event start/end date.
 
