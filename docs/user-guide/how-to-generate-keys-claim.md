@@ -28,7 +28,7 @@ Use “Generate a static key” option if you want to generate a static link cla
 
 :::
 
-![Key generating modal screenshot](../../static/img/user-guide/key-generating-modal.png)
+![Key generating modal screenshot](../../static/img/user-guide/key-generating-modal.jpeg)
 
 Key generating is a three steps process:
 
