@@ -1,8 +1,6 @@
 module.exports = {
   docs: [
     'overview',
-    'administration',
-    'architecture',
     'how-it-works',
     {
       type: 'category',
@@ -14,19 +12,27 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Technical Reference',
+      items: [
+        'technical_reference/architecture',
+        'technical_reference/ipfs',
+        'technical_reference/subgraph'
+      ]
+    },
+    {
+      type: 'category',
       label: 'Contracts',
       items: [
         'contracts/h00kd',
         'contracts/h00kd_metadata',
       ],
     },
+    /*
     {
       type: 'category',
       label: 'Security',
       items: ['security/bugbounty'],
-    },
+    },*/
     'deployed-contracts',
-    'subgraph',
-    'ipfs'
   ],
 }
