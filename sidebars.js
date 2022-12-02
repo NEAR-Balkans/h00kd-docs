@@ -5,7 +5,6 @@ module.exports = {
       type: 'category',
       label: 'User guide',
       items: [
-        'user-guide/basics',
         'user-guide/how-to-create-event',
         'user-guide/how-to-generate-keys-claim',
         'user-guide/how-to-generate-keys-create',
