@@ -2,16 +2,16 @@
 
 Creating an event is the first step required toward having h00ks (collectibles) ready for claiming.
 
-### Step 1
+### Step 1: Connect wallet
+
+Connect your near using the connect button at the top right corner, in case you don’t already have a NEAR Wallet follow this [guide](https://wiki.near.org/getting-started/creating-a-near-wallet) to learn how to create one.
+
+### Step 2: Navigate to page
 
 To begin, navigate to [events creation](https://app.h00kd.com/admin/create). This page contains the form used to create events
 ![event creation page screenshot](../../static/img/user-guide/events-creation.png)
 
-### Step 2
-
-Connect your near using the connect button at the top right corner, in case you don’t already have a NEAR Wallet follow this [guide](https://wiki.near.org/getting-started/creating-a-near-wallet) to learn how to create one.
-
-### Step 3
+### Step 3: Fill the form
 
 Once connected to hookd platform with your NEAR wallet, next step is to fill the form fields with appropriate details
 
@@ -31,7 +31,7 @@ Details filled here will be present to collectors on the h00k preview modal
 
 ![event creation page screenshot](../../static/img/user-guide/h00k-preview.png)
 
-### Step 4
+### Step 4: Submit
 
 After filling in all the event details, the next step is to submit by clicking on the Create button at the bottom of the form.
 

@@ -2,21 +2,21 @@
 
 You may want to close or cancel an event, closing an event is a simple process.
 
-## Step 1:
+## Step 1: Connect wallet
 
-Connect your NEAR wallet to h00kd platform.
+Connect your near using the connect button at the top right corner, in case you don’t already have a NEAR Wallet follow this [guide](https://wiki.near.org/getting-started/creating-a-near-wallet) to learn how to create one.
 
-## Step 2:
+## Step 2: Navigate to page
 
 Navigate to [manage events page](https://app.h00kd.com/admin/manage), there you will find a table containing the list of events created by the connected wallet.
 
-## Step 3:
+## Step 3: Open modal
 
 On the row of the event you intend to close, click on lock icon on ‘Actions’ column which will open a modal.
 
 ![screenshot of manage screen with a pointer to lock icon for event closing](../../static/img/user-guide/lock-modal-indicator.png)
 
-## Step 4:
+## Step 4: Confirm cancelation
 
 The modal prompt you to confirm the closing/cancelation of the event.
 

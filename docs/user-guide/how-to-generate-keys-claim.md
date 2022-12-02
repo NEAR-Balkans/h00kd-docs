@@ -2,20 +2,20 @@
 
 After you have created an event (follow this [guide](./how-to-create-event) on how to create an event) and you want to distribute it to h00k to your collectors. In this guide we will go through all steps needed to generate the keys used to claim your event’s h00k. follow along:
 
-### Step 1
+### Step 1: Connect wallet
 
-Connect your NEAR Wallet to h00kd platform using the connect button at the top right corner.
+Connect your near using the connect button at the top right corner, in case you don’t already have a NEAR Wallet follow this [guide](https://wiki.near.org/getting-started/creating-a-near-wallet) to learn how to create one.
 
-### Step 2
+### Step 2: Navigate to page
 
 Navigate to [manage events](https://app.h00kd.com/admin/manage), This page contains the list of events created using the currently connected NEAR Wallet.
 
-### Step 3
+### Step 3: Open modal
 
 On the row of the event you want to generate new claim keys for, click on key icon on ‘Actions’ column.
 ![screenshot of manage screen with a pointer to key icon for keys generation](../../static/img/user-guide/keys-modal-indicator.png)
 
-### Step 4
+### Step 4: Save and submit generated keys
 
 After opening the modal, you choose between generating two types of keys:
 
