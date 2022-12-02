@@ -4,33 +4,16 @@
 
 ## Overview
 
-The Token Metadata is the structure that contains all the data related to a certain NFT. Since most of the NFTs that user will claim are very similar to each other, this data sits on the "genesis" token exclusively. When reading a cloned token, the metadata is fetched from the genesis token, thus it does not ocupy unnecessary storage and NFTs are even cheaper to create.
+H00KD composed of three contracts, one of which is external. The external [Linkdrop](#linkdrop) contract is used to create new NEAR accounts and it is being called on very specific situations. The remaining two contracts constitute the main functionalities of H00KD. [H00KD Metadata](#h00kd-metadata) contract manages all the events, from creating new events, adding new public keys and closing or canceling events. Lastly, [H00KD](#h00kd) contract is a [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) contract with an additional complexity layer that optimizes storage and gas costs.
 
 ![alt text](../static/img/h00kd_arch.png)
 
-## H00KD
+## Linkdrop
 
-The [H00KD](./contracts/h00kd.md) contract implements the [NEP-171](https://github.com/near/NEPs/blob/master/neps/nep-0171.md) standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
+- [Source code](https://github.com/near/near-linkdrop)
+- [Method](https://github.com/near/near-linkdrop/blob/master/src/lib.rs#L127)
 
-### Clone
-
-- [Source](https://github.com/shard-Labs/near_non_fungible_token_with_clone/)
-
-The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
-
-#### Impact of clonable NFTs on storage and gas costs
-
-The mint mechanism presents some inefficiencies when it comes to our use case. We know that on a Cross Contract Call scenario, increasing the arguments within any method will increase as well the gas costs of a recipe.
-
-A way to minimize the gas costs on H00KD is to reduce the size of recipes on claiming new NFTs. To achieve that, we created a so called "genesis token" on creating a new event. Thus, we can use the genesis token to replicate or clone it multiple times without spending additional gas.
-
-In addition to the previous improvment, cloned NFTs only store the id and owner information. All additional infomation about the NFT is hosted on the genesis token and it can be fetched on demand.
-
-#### Storage comparison
-
-![alt text](../static/img/mint_vs_clone.png)
-
-After experimenting with both mechanisms, we found that, for a reasonabe NFT data size, cloning NFTs is being more efficient in comparison to minting new NFTs, where the cost storage increases drastically.
+H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdrop contract allows any user or contracts to create a new NEAR account by making use of the `create_account` method.
 
 ## H00KD Metadata
 
@@ -56,12 +39,29 @@ A cancelled evend indicated that the event has been cancelled. An event canm mov
 
 **Note: after closing or cancelling an event, all interactions with that event are disabled**
 
-## Linkdrop
+## H00KD
 
-- [Source code](https://github.com/near/near-linkdrop)
-- [Method](https://github.com/near/near-linkdrop/blob/master/src/lib.rs#L127)
+The [H00KD](./contracts/h00kd.md) contract implements the NEP-171 standard in order to manage and store NFTs. On top of all NEP-171 functionalities, we added an optimization layer that allows us to reduce the storage costs and enable event owners to create NFTs cheaper than ever.
 
-H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdrop contract allows any user or contracts to create a new NEAR account by making use of the `create_account` method.
+### Clone
+
+- [Source](https://github.com/shard-Labs/near_non_fungible_token_with_clone/)
+
+The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
+
+#### Impact of clonable NFTs on storage and gas costs
+
+The mint mechanism presents some inefficiencies when it comes to our use case. We know that on a Cross Contract Call scenario, increasing the arguments within any method will increase as well the gas costs of a recipe.
+
+A way to minimize the gas costs on H00KD is to reduce the size of recipes on claiming new NFTs. To achieve that, we created a so called "genesis token" on creating a new event. Thus, we can use the genesis token to replicate or clone it multiple times without spending additional gas.
+
+In addition to the previous improvment, cloned NFTs only store the id and owner information. All additional infomation about the NFT is hosted on the genesis token and it can be fetched on demand.
+
+#### Storage comparison
+
+![alt text](../static/img/mint_vs_clone.png)
+
+After experimenting with both mechanisms, we found that, for a reasonabe NFT data size, cloning NFTs is being more efficient in comparison to minting new NFTs, where the cost storage increases drastically.
 
 ## Crate new event and adding public keys
 
