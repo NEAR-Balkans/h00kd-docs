@@ -61,7 +61,7 @@ A cancelled evend indicated that the event has been cancelled. An event canm mov
 - [Source code](https://github.com/near/near-linkdrop)
 - [Method](https://github.com/near/near-linkdrop/blob/master/src/lib.rs#L127)
 
-H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdrop contract allows any user or contract to create a new NEAR account by making use of the `create_account` method.
+H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdrop contract allows any user or contracts to create a new NEAR account by making use of the `create_account` method.
 
 ## Crate new event and adding public keys
 
@@ -89,6 +89,8 @@ const fileAdded = await node.add({
   content: JSON.stringify(IPFS_event_data),
 })
 ```
+
+[More about ipfs-core here](https://docs.ipfs.tech/basics/js/js-ipfs/)
 
 The create event method accepts four arguments: cid, token_metadata, start date and end date.
 
