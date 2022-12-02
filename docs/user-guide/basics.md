@@ -9,4 +9,12 @@ A h00k is an NFT (Non-fungable token) minted on h00kd smart contract with the di
 
 ## h00kd flow
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+H00kd user flow is performed by two actors (Issuers and collectors):
+
+- **Issuers**: Are event organizers and are responsible for:
+  - Creating event's h00k: Providing all the details of the event for the creation of the h00k (check [guide](how-to-create-event))
+  - Generating keys: Generating different types of keys depending on distrbution method (check [How to generate claim keys](./how-to-generate-keys-claim) & [How to generate account creation keys](./how-to-generate-keys-create)).
+  - Closing an event once the organizers decide to end the distribution process
+- **Collectors**: Are event attendees and are granted the possibilty to:
+  - Claim h00ks using the QRCode or links provided for them by the issuers
+  - View their h00ks on their personal gallery page

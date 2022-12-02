@@ -1,6 +1,6 @@
 # How to generate keys with wallet creation
 
-After you have created an event (follow this guide on how to create an event) and you want to distribute it to h00k to your collectors. In this guide we will go through all steps needed to generate the keys used to claim your event’s h00k. follow along:
+After you have created an event (follow this [guide](./how-to-create-event) on how to create an event) and you want to distribute it to h00k to your collectors. In this guide we will go through all steps needed to generate the keys used to claim your event’s h00k. follow along:
 
 ### Step 1
 
