@@ -15,17 +15,17 @@ Connect your near using the connect button at the top right corner, in case you 
 
 Once connected to hookd platform with your NEAR wallet, next step is to fill the form fields with appropriate details
 
-| #   | Field       | Description |
-| --- | ----------- | ----------- |
-| 1   | Title       |             |
-| 2   | Description |             |
-| 3   | City        |             |
-| 4   | Country     |             |
-| 5   | Date from   |             |
-| 6   | Date to     |             |
-| 7   | Tags        |             |
-| 8   | Links       |             |
-| 9   | Media       |             |
+| #   | Field (\* required) | Description                                 |
+| --- | ------------------- | ------------------------------------------- |
+| 1   | Title\*             | Title given to the event and NFT            |
+| 2   | Description\*       | (preferably short) description of the event |
+| 3   | City                | City in which the event took place          |
+| 4   | Country             | Country in which the event took place       |
+| 5   | Date from           | Date on which the event start               |
+| 6   | Date to             | Date on which the event ended               |
+| 7   | Tags                | Keywords related to the topic of the event  |
+| 8   | Links               | Links to event related resources            |
+| 9   | Media\*             | Media file attached to the h00k             |
 
 Details filled here will be present to collectors on the h00k preview modal
 
