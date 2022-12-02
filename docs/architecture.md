@@ -19,6 +19,12 @@ H00KD make use of the Linkdrop contract to create new NEAR accounts. The Linkdro
 
 The [H00KD Metadata](./contracts/h00kd_metadata.md) contract's role is to manage all the events created and enable users create NEAR accounts and claim new NFTs.
 
+### Crate new event and adding public keys
+
+When creating a new event, the event data is being stored on IPFS [(example)](./ipfs.md). Once the event data's CID is obtained, it will be stored on the contract along side with the [genesis token](#genesis-token) metadata and the event start/end date.
+
+![alt text](../static/img/create_event_add_keys.png)
+
 ### Event State Transition
 
 ![alt text](../static/img/event_state_transition.png)
@@ -49,49 +55,12 @@ The [H00KD](./contracts/h00kd.md) contract implements the NEP-171 standard in or
 
 The contract implements a new functionality to optimize minting new NFTs using a "root" or "genesis" token. This new feature is called "Clonable NFTs" and its main goal is to save storage and improve gas costs on all claim transactions.
 
+#### Genesis Token
+
+To completely optimize the storage costs of cloned NFTs and avoid duplicated data, all data related to any NFT is stored within the geneis token, which is minted on event creation. The only data a cloned NFT stores is the token id and the owner account id. Thus, when fetching any NFT from the contract, data from genesis token is used to complement the cloned NFT data.
+
 #### Impact of clonable NFTs on storage and gas costs
-
-The mint mechanism presents some inefficiencies when it comes to our use case. We know that on a Cross Contract Call scenario, increasing the arguments within any method will increase as well the gas costs of a recipe.
-
-A way to minimize the gas costs on H00KD is to reduce the size of recipes on claiming new NFTs. To achieve that, we created a so called "genesis token" on creating a new event. Thus, we can use the genesis token to replicate or clone it multiple times without spending additional gas.
-
-In addition to the previous improvment, cloned NFTs only store the id and owner information. All additional infomation about the NFT is hosted on the genesis token and it can be fetched on demand.
-
-#### Storage comparison
 
 ![alt text](../static/img/mint_vs_clone.png)
 
 After experimenting with both mechanisms, we found that, for a reasonabe NFT data size, cloning NFTs is being more efficient in comparison to minting new NFTs, where the cost storage increases drastically.
-
-## Crate new event and adding public keys
-
-Previously to interacting with the contract, the event data needs to be stored on IPFS. The CID is needed to be stored within the contrac for traceability reasons. The CID is currently being used to querry the event data using GraphQL, so make sure you are using the [CID V1](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1) format.
-
-Here's an example of how one can store event data on IPFS using JS.
-
-```js
-import * as IPFS from 'ipfs-core'
-
-let IPFS_event_data = {
-  title: 'Event Title',
-  description: 'description',
-  tags: 'tags',
-  country: 'country',
-  city: 'city',
-  date_from: 1000000000,
-  date_to: 10000000000000000,
-  image: 'some image',
-  links: 'links to event',
-}
-
-const fileAdded = await node.add({
-  path: `${nearNetworkId}_event_${element.event_id}.json`,
-  content: JSON.stringify(IPFS_event_data),
-})
-```
-
-[More about ipfs-core here](https://docs.ipfs.tech/basics/js/js-ipfs/)
-
-The create event method accepts four arguments: cid, token_metadata, start date and end date.
-
-![alt text](../static/img/create_event_add_keys.png)
