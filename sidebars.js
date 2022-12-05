@@ -3,12 +3,20 @@ module.exports = {
     'overview',
     {
       type: 'category',
-      label: 'User guide',
+      label: 'Issuer Guide',
       items: [
-        'user-guide/how-to-create-event',
-        'user-guide/how-to-generate-keys-claim',
-        'user-guide/how-to-generate-keys-create',
-        'user-guide/how-to-close-event',
+        'issuer-guide/how-to-create-event',
+        'issuer-guide/how-to-generate-keys-claim',
+        'issuer-guide/how-to-generate-keys-create',
+        'issuer-guide/how-to-close-event',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Collector Guide',
+      items: [
+        'collector-guide/claim',
+        'collector-guide/create_account_and_claim',
       ],
     },
     {
@@ -35,5 +43,6 @@ module.exports = {
       items: ['security/bugbounty'],
     },*/
     'deployed-contracts',
+    'faq',
   ],
 }
