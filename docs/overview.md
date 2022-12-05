@@ -18,10 +18,13 @@ A h00k is an NFT (Non-fungible token) minted on h00kd smart contract with a digi
 
 H00kd user flow is performed by two actors (Issuers and collectors):
 
-- **Issuers**: Are event organizers and are responsible for:
-  - Creating event's h00k: Providing all the details of the event for the creation of the h00k (check [guide](./user-guide/how-to-create-event))
-  - Generating keys: Generating different types of keys depending on the distrbution method (check [How to generate claim keys](./user-guide/how-to-generate-keys-claim) & [How to generate account creation keys](./user-guide/how-to-generate-keys-create)).
-  - Closing an event once the organizers decide to end the distribution process
-- **Collectors**: Are event attendees and are granted the possibility to:
-  - Claim h00ks using the QRCode or links provided for them by the issuers
-  - View their h00ks on their gallery page
+### Issuer
+The issuer(event organizer) is responsible for creating event's h00k by providing all the details then submit the form to the contract deployed on Near chain. After, the event created the owner can generate private keys mapped with the event then distribute them to the collectors either, to claim a h00k or to create a new Near account and claim.
+When the event is done, the issuer can close it and get back the amount of the hooks not claimed.
+Read more about issuer [guide](issuer-guide/how-to-create-event)
+
+
+### collector
+Event attendees can claim h00ks using the QRCode or links provided for them by the issuers. The h00ks claimed are displayed on the gallery and Near wallet dashboard.
+Read more about collector [collector](collector-guide/claim)
+
