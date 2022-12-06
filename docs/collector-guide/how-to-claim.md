@@ -1,11 +1,11 @@
 # How to claim a h00k
 
-To claim a your h00k and have it displayed on your gallery, you simply need to:
+To claim a h00k and have it displayed on your gallery, you simply need to:
 
 ### Step 1: Get a valid claim link
 
-First, you must be in possession of a valid claim link.
-Claim links are provided by h00k issuers (event organizers) and usually come in one of the these two formats, a link or QRCode.
+First, you must have a valid claim link.
+Claim links are provided by h00k issuers (event organizers) and usually come in one of these two formats (Link, QRCode).
 
 #### Link
 
@@ -16,14 +16,14 @@ Claim links are provided by h00k issuers (event organizers) and usually come in 
 - **key**: private key used to claim.
 
 Open the link in a web browser and type in your NEAR Wallet username in the field.
-Then, click on claim button.
+Then, click on **claim** button.
 
 #### QRCode
 
 ![Picture of collectors scanning QRCode for claim link](../../static/img/user-guide/qrcode_scanning.jpeg)
 
-Scan the QRCode using a scanning app to ppen the link in a web browser and type in your NEAR Wallet username in the field.
-Then, click on claim button.
+Scan the QRCode using a scanning app to open the link in a web browser and type in your NEAR Wallet username in the field.
+Then, click on **claim** button.
 
 ### Step 2: Submit collector's NEAR Wallet
 
