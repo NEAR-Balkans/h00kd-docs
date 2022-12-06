@@ -15,8 +15,9 @@ module.exports = {
       type: 'category',
       label: 'Collector Guide',
       items: [
-        'collector-guide/claim',
-        'collector-guide/create_account_and_claim',
+        'collector-guide/how-to-claim',
+        'collector-guide/how-to-create-and-claim',
+        'collector-guide/where-to-view-h00ks',
       ],
     },
     {

@@ -26,5 +26,5 @@ Read more about issuer [guide](issuer-guide/how-to-create-event)
 
 ### collector
 Event attendees can claim h00ks using the QRCode or links provided for them by the issuers. The h00ks claimed are displayed on the gallery and Near wallet dashboard.
-Read more about collector [collector](collector-guide/claim)
+Read more about collector [collector](collector-guide/how-to-claim)
 
