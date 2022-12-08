@@ -1,13 +1,23 @@
 module.exports = {
   docs: [
     'overview',
-    'how-it-works',
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Issuer Guide',
       items: [
-        'guides/h00kd',
-        'guides/h00kd_metadata',
+        'issuer-guide/how-to-create-event',
+        'issuer-guide/how-to-generate-keys-claim',
+        'issuer-guide/how-to-generate-keys-create',
+        'issuer-guide/how-to-close-event',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Collector Guide',
+      items: [
+        'collector-guide/how-to-claim',
+        'collector-guide/how-to-create-and-claim',
+        'collector-guide/where-to-view-h00ks',
       ],
     },
     {
@@ -34,5 +44,6 @@ module.exports = {
       items: ['security/bugbounty'],
     },*/
     'deployed-contracts',
+    'faq',
   ],
 }

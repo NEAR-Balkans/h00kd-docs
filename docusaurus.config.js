@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon-32x32.png',
+  favicon: 'img/favicon.ico',
   organizationName: 'ShardLabs', // Usually your GitHub org/user name.
   projectName: 'h00kd-docs', // Usually your repo name.
   themeConfig: {
